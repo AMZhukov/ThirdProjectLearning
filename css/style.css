@@ -1,0 +1,11 @@
+.intro {
+    color: red;
+}
+.outro {
+    color: orange;
+    disabled: true;
+    display: flex;
+}
+.buttonOne {
+    color: greenyellow;
+}
