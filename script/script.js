@@ -23,7 +23,7 @@ DomElement.prototype.createDivOrP = function () {
     }
     else if (this.selector.charAt(0) == '#') {
         divOrP = document.createElement('p');
-        divOrP = this.selector;
+        divOrP.className = this.selector;
         divOrP.innerHTML = 'Элемент P';
         divOrP.style.cssText = 'height:' + this.height + 'px; width:' + this.width + 'px; background:' + this.bg + '; font-size: ' + this.fontSize + 'px;';
         document.body.appendChild(divOrP);
