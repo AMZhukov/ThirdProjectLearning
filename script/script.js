@@ -1,8 +1,11 @@
-let start = document.querySelector('.buttonOne');
+let start = document.querySelector('.buttonOne'),
+    selectorIntro = document.querySelector('.intro'),
+    selectorOutro = document.querySelector('.outro');
+
+
+
 
 const DomElement = function () {
-    this.selectorIntro = document.querySelector('.intro');
-    this.selectorOutro = document.querySelector('.outro');
     this.bg = 'background-color: gray; ';
     this.height = 'height: 100px; ';
     this.width = 'width: 100px; ';
@@ -12,15 +15,14 @@ const DomElement = function () {
 DomElement.prototype.func = function () {
     let temp = null,
         typeDivOrP = null;
-    const _this = this;
-    if (this.selectorIntro.value[0] === '.') {
+    if (selectorIntro.value[0] === '.') {
         typeDivOrP = 'p';
-    } else if (this.selectorIntro.value[0] === '#') {
+    } else if (selectorIntro.value[0] === '#') {
         typeDivOrP = 'div';
     } else return;
-    _this.selectorOutro.style.cssText = this.bg + this.height + this.width + this.fontSize;
+    selectorOutro.style.cssText = this.bg + this.height + this.width + this.fontSize;
     temp = '<' + typeDivOrP + ' class="outro">' + _this.selectorIntro.value + '</' + typeDivOrP + '>';
-    this.selectorOutro.innerHTML = temp;
+    selectorOutro.innerHTML = temp;
 };
 
 const domElement = new DomElement();
